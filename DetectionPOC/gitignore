@@ -1,0 +1,15 @@
+# Xcode
+.DS_Store
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+Package.resolved
+.package.resolved
+
+# Environment files
+.env
+.env.local
