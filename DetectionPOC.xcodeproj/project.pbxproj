@@ -6,13 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DD12C48011034F3C6BCEFC47 /* Pods_DetectionPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8A3D27C51918A256F88CD /* Pods_DetectionPOC.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		03B8A3D27C51918A256F88CD /* Pods_DetectionPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DetectionPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE9CF812E1EE0E1009444A4 /* DetectionPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectionPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA575AC0FA8EAF5AAEBABA2 /* Pods-DetectionPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectionPOC.release.xcconfig"; path = "Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC.release.xcconfig"; sourceTree = "<group>"; };
+		8E3B72964B67F3E0246BAD85 /* Pods-DetectionPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectionPOC.debug.xcconfig"; path = "Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0AE9CF832E1EE0E1009444A4 /* DetectionPOC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = DetectionPOC;
 			sourceTree = "<group>";
 		};
@@ -23,17 +32,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD12C48011034F3C6BCEFC47 /* Pods_DetectionPOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0503EF7CA293BD4EF5BD2888 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03B8A3D27C51918A256F88CD /* Pods_DetectionPOC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0AE9CF782E1EE0E1009444A4 = {
 			isa = PBXGroup;
 			children = (
 				0AE9CF832E1EE0E1009444A4 /* DetectionPOC */,
 				0AE9CF822E1EE0E1009444A4 /* Products */,
+				46BD3DF1B1A6878FDF218173 /* Pods */,
+				0503EF7CA293BD4EF5BD2888 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +65,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		46BD3DF1B1A6878FDF218173 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E3B72964B67F3E0246BAD85 /* Pods-DetectionPOC.debug.xcconfig */,
+				8AA575AC0FA8EAF5AAEBABA2 /* Pods-DetectionPOC.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,9 +82,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AE9CFA52E1EE0E2009444A4 /* Build configuration list for PBXNativeTarget "DetectionPOC" */;
 			buildPhases = (
+				6547C52F89CC1CEB341DE910 /* [CP] Check Pods Manifest.lock */,
 				0AE9CF7D2E1EE0E1009444A4 /* Sources */,
 				0AE9CF7E2E1EE0E1009444A4 /* Frameworks */,
 				0AE9CF7F2E1EE0E1009444A4 /* Resources */,
+				926FC2A1F9554427CA5277A3 /* [CP] Embed Pods Frameworks */,
+				B57B91494F80CF3E5F6023BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -64,8 +97,6 @@
 				0AE9CF832E1EE0E1009444A4 /* DetectionPOC */,
 			);
 			name = DetectionPOC;
-			packageProductDependencies = (
-			);
 			productName = DetectionPOC;
 			productReference = 0AE9CF812E1EE0E1009444A4 /* DetectionPOC.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +144,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6547C52F89CC1CEB341DE910 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DetectionPOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		926FC2A1F9554427CA5277A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B57B91494F80CF3E5F6023BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AE9CF7D2E1EE0E1009444A4 /* Sources */ = {
@@ -246,6 +336,7 @@
 		};
 		0AE9CFA62E1EE0E2009444A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E3B72964B67F3E0246BAD85 /* Pods-DetectionPOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -277,6 +368,7 @@
 		};
 		0AE9CFA72E1EE0E2009444A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA575AC0FA8EAF5AAEBABA2 /* Pods-DetectionPOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
