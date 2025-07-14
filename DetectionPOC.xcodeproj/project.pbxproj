@@ -7,20 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD12C48011034F3C6BCEFC47 /* Pods_DetectionPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B8A3D27C51918A256F88CD /* Pods_DetectionPOC.framework */; };
+		12AD40CBCD3F4C68ABA35A97 /* Pods_DetectionPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874F0A640F68733153780E87 /* Pods_DetectionPOC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03B8A3D27C51918A256F88CD /* Pods_DetectionPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DetectionPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE9CF812E1EE0E1009444A4 /* DetectionPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectionPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AA575AC0FA8EAF5AAEBABA2 /* Pods-DetectionPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectionPOC.release.xcconfig"; path = "Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC.release.xcconfig"; sourceTree = "<group>"; };
-		8E3B72964B67F3E0246BAD85 /* Pods-DetectionPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectionPOC.debug.xcconfig"; path = "Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC.debug.xcconfig"; sourceTree = "<group>"; };
+		461804C2F272483CC29E2982 /* Pods-DetectionPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectionPOC.release.xcconfig"; path = "Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC.release.xcconfig"; sourceTree = "<group>"; };
+		874F0A640F68733153780E87 /* Pods_DetectionPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DetectionPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D9C5C10B7F8B02B5740E2A6 /* Pods-DetectionPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetectionPOC.debug.xcconfig"; path = "Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0AE9CFC02E202D1B009444A4 /* Exceptions for "DetectionPOC" folder in "DetectionPOC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0AE9CF802E1EE0E1009444A4 /* DetectionPOC */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0AE9CF832E1EE0E1009444A4 /* DetectionPOC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				0AE9CFC02E202D1B009444A4 /* Exceptions for "DetectionPOC" folder in "DetectionPOC" target */,
 			);
 			path = DetectionPOC;
 			sourceTree = "<group>";
@@ -32,28 +43,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD12C48011034F3C6BCEFC47 /* Pods_DetectionPOC.framework in Frameworks */,
+				12AD40CBCD3F4C68ABA35A97 /* Pods_DetectionPOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0503EF7CA293BD4EF5BD2888 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				03B8A3D27C51918A256F88CD /* Pods_DetectionPOC.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		0AE9CF782E1EE0E1009444A4 = {
 			isa = PBXGroup;
 			children = (
 				0AE9CF832E1EE0E1009444A4 /* DetectionPOC */,
 				0AE9CF822E1EE0E1009444A4 /* Products */,
 				46BD3DF1B1A6878FDF218173 /* Pods */,
-				0503EF7CA293BD4EF5BD2888 /* Frameworks */,
+				180BE5AF05D7A26A5E61E1C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,13 +68,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		180BE5AF05D7A26A5E61E1C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				874F0A640F68733153780E87 /* Pods_DetectionPOC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		46BD3DF1B1A6878FDF218173 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8E3B72964B67F3E0246BAD85 /* Pods-DetectionPOC.debug.xcconfig */,
-				8AA575AC0FA8EAF5AAEBABA2 /* Pods-DetectionPOC.release.xcconfig */,
+				8D9C5C10B7F8B02B5740E2A6 /* Pods-DetectionPOC.debug.xcconfig */,
+				461804C2F272483CC29E2982 /* Pods-DetectionPOC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,12 +92,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AE9CFA52E1EE0E2009444A4 /* Build configuration list for PBXNativeTarget "DetectionPOC" */;
 			buildPhases = (
-				6547C52F89CC1CEB341DE910 /* [CP] Check Pods Manifest.lock */,
+				3B9B1ADD1BBAEF13D76D3126 /* [CP] Check Pods Manifest.lock */,
 				0AE9CF7D2E1EE0E1009444A4 /* Sources */,
 				0AE9CF7E2E1EE0E1009444A4 /* Frameworks */,
 				0AE9CF7F2E1EE0E1009444A4 /* Resources */,
-				926FC2A1F9554427CA5277A3 /* [CP] Embed Pods Frameworks */,
-				B57B91494F80CF3E5F6023BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,7 +154,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6547C52F89CC1CEB341DE910 /* [CP] Check Pods Manifest.lock */ = {
+		3B9B1ADD1BBAEF13D76D3126 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,40 +174,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		926FC2A1F9554427CA5277A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B57B91494F80CF3E5F6023BF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DetectionPOC/Pods-DetectionPOC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -252,7 +226,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -315,7 +289,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -336,17 +310,20 @@
 		};
 		0AE9CFA62E1EE0E2009444A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E3B72964B67F3E0246BAD85 /* Pods-DetectionPOC.debug.xcconfig */;
+			baseConfigurationReference = 8D9C5C10B7F8B02B5740E2A6 /* Pods-DetectionPOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DetectionPOC/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FLK7FC7P3D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DetectionPOC/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera for real-time detection.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app uses the library to analyze media for object detection";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -368,17 +345,20 @@
 		};
 		0AE9CFA72E1EE0E2009444A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AA575AC0FA8EAF5AAEBABA2 /* Pods-DetectionPOC.release.xcconfig */;
+			baseConfigurationReference = 461804C2F272483CC29E2982 /* Pods-DetectionPOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DetectionPOC/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FLK7FC7P3D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DetectionPOC/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera for real-time detection.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app uses the library to analyze media for object detection";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
