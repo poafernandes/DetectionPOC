@@ -6,6 +6,7 @@
 //
 import Foundation
 import AVFoundation
+import MLKit
 
 class CameraManager: NSObject {
     private let captureSession = AVCaptureSession()
@@ -67,5 +68,34 @@ class CameraManager: NSObject {
 extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         previewStreamUpdated?.yield(sampleBuffer)
+        
+        guard let inputImage = MLImage(sampleBuffer: sampleBuffer) else {
+            return
+        }
+        
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            return
+        }
+        
+        let imageHeight = CGFloat(CVPixelBufferGetHeight(imageBuffer))
+        let imageWidth = CGFloat(CVPixelBufferGetWidth(imageBuffer))
+        
+        detectPose(in: inputImage)
+    }
+    
+    private func detectPose(in image: MLImage) {
+        let poseDetector = PoseDetector.poseDetector(options: AccuratePoseDetectorOptions())
+        
+        var poses: [Pose] = []
+        var detectionError: Error?
+        
+        do {
+            poses = try poseDetector.results(in: image)
+        } catch let error {
+            detectionError = error
+        }
+        
+        print("Pose detected: \(poses.count)")
+        print("Value: \(poses)")
     }
 }
