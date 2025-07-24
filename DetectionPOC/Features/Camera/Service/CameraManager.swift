@@ -32,6 +32,8 @@ class CameraManager: NSObject {
         }
     }()
     
+    weak var delegate: PoseDetectorDelegate?
+    
     private func configureCapture() async {
         guard let systemPreferredCamera = AVCaptureDevice.default(for: .video),
               let input = try? AVCaptureDeviceInput(device: systemPreferredCamera),
@@ -49,6 +51,7 @@ class CameraManager: NSObject {
         
         captureSession.addInput(input)
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "camera.preview.session"))
+        videoOutput.alwaysDiscardsLateVideoFrames = true
         captureSession.addOutput(videoOutput)
         
         guard await permissionGranted else { return }
@@ -77,25 +80,27 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
         
-        let imageHeight = CGFloat(CVPixelBufferGetHeight(imageBuffer))
-        let imageWidth = CGFloat(CVPixelBufferGetWidth(imageBuffer))
+//        let imageHeight = CGFloat(CVPixelBufferGetHeight(imageBuffer))
+//        let imageWidth = CGFloat(CVPixelBufferGetWidth(imageBuffer))
         
         detectPose(in: inputImage)
     }
     
     private func detectPose(in image: MLImage) {
-        let poseDetector = PoseDetector.poseDetector(options: AccuratePoseDetectorOptions())
+        let detectorOptions = PoseDetectorOptions()
+        detectorOptions.detectorMode = .stream
+        
+        let poseDetector = PoseDetector.poseDetector(options: detectorOptions)
         
         var poses: [Pose] = []
-        var detectionError: Error?
         
         do {
             poses = try poseDetector.results(in: image)
         } catch let error {
-            detectionError = error
+            print(error.localizedDescription)
         }
         
-        print("Pose detected: \(poses.count)")
-        print("Value: \(poses)")
+        print("👁️ Arrived here tf")
+        delegate?.forwardPoses(for: poses)
     }
 }

@@ -18,6 +18,14 @@ struct CameraStreamView: View {
             } else {
                 ProgressView()
             }
+            LazyVStack {
+                ForEach(cameraVM.detectedPoses) { detection in
+                    Text(detection.description)
+                        .padding()
+                        .font(.title)
+                }
+            }
+            .padding()
         }
         .task {
             await cameraVM.startCamera()

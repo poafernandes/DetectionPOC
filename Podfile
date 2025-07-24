@@ -6,6 +6,6 @@ target 'DetectionPOC' do
   use_frameworks!
 
   # Pods for DetectionPOC
-  pod 'GoogleMLKit/PoseDetectionAccurate', '8.0.0'
+  pod 'GoogleMLKit/PoseDetection', '8.0.0'
 
 end
